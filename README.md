@@ -2,7 +2,7 @@
 
 A responsive CV builder where you fill in your details, save them into a clean, document-style CV, and export the result as a PDF. 
 
-**[Live demo](https://6ac0eaabf9599b869a58a7fe--clinquant-clafoutis-77bd6a.netlify.app/)** · **[Source code](https://github.com/Dee-pack/cv-application.git)**
+**[Live demo](https://cv-application-seven-lovat.vercel.app/)** · **[Source code](https://github.com/Dee-pack/cv-application.git)**
 ![CV Application screenshot](./docs/Screenshot.png)
 
 ## Features
