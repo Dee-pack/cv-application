@@ -15,8 +15,8 @@ export default function Education() {
     const { name, value } = e.target;
     setEntries(
       entries.map((entry) =>
-        entry.id === id ? { ...entry, [name]: value } : entry
-      )
+        entry.id === id ? { ...entry, [name]: value } : entry,
+      ),
     );
   };
 
@@ -33,24 +33,28 @@ export default function Education() {
   if (!isEditing) {
     return (
       <section className="card">
-        <h2>Education</h2>
+        <h2 className="section-title">Education</h2>
         {entries.map((entry) => (
-          <div key={entry.id}>
-            <h3>{entry.school}</h3>
+          <div key={entry.id} className="entry">
+            <div className="entry-header">
+              <h3>{entry.school}</h3>
+              <span className="muted">{entry.year}</span>
+            </div>
             <p>{entry.title}</p>
-            <p>{entry.year}</p>
           </div>
         ))}
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <button className="btn btn-ghost" onClick={() => setIsEditing(true)}>
+          Edit
+        </button>
       </section>
     );
   }
 
   return (
     <form className="card" onSubmit={handleSubmit}>
-      <h2>Education</h2>
+      <h2 className="section-title">Education</h2>
       {entries.map((entry) => (
-        <div key={entry.id}>
+        <div key={entry.id} className="entry entry-form">
           <input
             name="school"
             value={entry.school}
@@ -62,7 +66,7 @@ export default function Education() {
             name="title"
             value={entry.title}
             onChange={(e) => handleChange(entry.id, e)}
-            placeholder="Title of study"
+            placeholder="Course of study"
           />
           <input
             name="year"
@@ -70,13 +74,23 @@ export default function Education() {
             onChange={(e) => handleChange(entry.id, e)}
             placeholder="2018 - 2022"
           />
-          <button type="button" onClick={() => removeEntry(entry.id)}>
+          <button
+            type="button"
+            className="btn btn-ghost btn-danger"
+            onClick={() => removeEntry(entry.id)}
+          >
             Remove
           </button>
         </div>
       ))}
-      <button type="button" onClick={addEntry}>+ Add education</button>
-      <button type="submit">Save</button>
+      <div className="actions">
+        <button type="button" className="btn btn-ghost" onClick={addEntry}>
+          + Add education
+        </button>
+        <button type="submit" className="btn btn-primary">
+          Save
+        </button>
+      </div>
     </form>
   );
 }

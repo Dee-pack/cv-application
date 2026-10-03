@@ -1,8 +1,12 @@
 import { useState } from "react";
 
 export default function GeneralInfo() {
-  const [data, setData] = useState({ name: "", email: "", phone: "" });
-  const [isEditing, setIsEditing] = useState(true);
+  const [data, setData] = useState({
+    name: "Your Name",
+    email: "you@example.com",
+    phone: "000 000 0000",
+  });
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -17,18 +21,41 @@ export default function GeneralInfo() {
     return (
       <section className="card">
         <h1>{data.name}</h1>
-        <p>{data.email} · {data.phone}</p>
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <p className="muted">
+          {data.email} · {data.phone}
+        </p>
+        <button className="btn btn-ghost" onClick={() => setIsEditing(true)}>
+          Edit
+        </button>
       </section>
     );
   }
 
   return (
     <form className="card" onSubmit={handleSubmit}>
-      <input name="name" value={data.name} onChange={handleChange} placeholder="Full name" required />
-      <input name="email" type="email" value={data.email} onChange={handleChange} placeholder="Email" />
-      <input name="phone" value={data.phone} onChange={handleChange} placeholder="Phone" />
-      <button type="submit">Save</button>
+      <input
+        name="name"
+        value={data.name}
+        onChange={handleChange}
+        placeholder="Full name"
+        required
+      />
+      <input
+        name="email"
+        type="email"
+        value={data.email}
+        onChange={handleChange}
+        placeholder="Email"
+      />
+      <input
+        name="phone"
+        value={data.phone}
+        onChange={handleChange}
+        placeholder="Phone"
+      />
+      <button type="submit" className="btn btn-primary">
+        Save
+      </button>
     </form>
   );
 }

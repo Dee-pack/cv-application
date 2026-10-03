@@ -1,0 +1,165 @@
+.card {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.card:first-child {
+    padding-top: 0;
+}
+
+.card:last-of-type {
+    border-bottom: none;
+}
+
+/* Typography */
+h1 {
+    margin: 0 0 0.25rem;
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 0.15rem 0;
+}
+
+.section-title {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+/* Display view */
+.entry {
+    margin-bottom: 1.25rem;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+/* Form view */
+.entry-form {
+    display: grid;
+    gap: 0.6rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fafafb;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    font: inherit;
+    color: var(--text);
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.55rem 1.1rem;
+    font: inherit;
+    font-weight: 500;
+    font-size: 0.92rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.btn-ghost:hover {
+    background: #f3f4f6;
+}
+
+.btn-danger {
+    color: var(--danger);
+    justify-self: start;
+}
+
+.btn-danger:hover {
+    background: #fef2f2;
+    border-color: #fecaca;
+}
+
+.actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+}
+
+.print-btn {
+    margin-top: 1.5rem;
+}
+
+/* Print */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .cv {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    @page {
+        margin: 1.5cm;
+    }
+}
