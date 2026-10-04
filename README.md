@@ -4,6 +4,8 @@ A responsive CV builder where you fill in your details, save them into a clean, 
 
 **[Live demo](https://cv-application-seven-lovat.vercel.app/)** · **[Source code](https://github.com/Dee-pack/cv-application.git)**
 ![CV Application screenshot](./docs/Screenshot.png)
+![CV Application screenshot](./docs/Screenshot2.png) 
+![CV Application screenshot](./docs/Screenshot3.png) 
 
 ## Features
 
@@ -63,4 +65,4 @@ src/
 
 ## Author
 
-**[Your Name]** · [GitHub](https://github.com/Dee-pack) · [LinkedIn](https://linkedin.com/in/your-handle)
+**[Dee Pack]** · [GitHub](https://github.com/Dee-pack) · [LinkedIn](https://www.linkedin.com/in/daniel-pinmiloye-631b8b375/)
